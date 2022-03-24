@@ -1,1 +1,1 @@
-# cf-template
+# cf-firestore-template
