@@ -1,0 +1,1 @@
+# cf-cloud-function-template
