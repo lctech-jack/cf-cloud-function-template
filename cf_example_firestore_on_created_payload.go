@@ -3,7 +3,7 @@ package cloudfunc
 import "time"
 
 // FirestoreEvent is the payload of a Firestore event.
-type FirestoreEvent struct {
+type ExampleFirestoreEvent struct {
 	OldValue   FirestoreValue `json:"oldValue"`
 	Value      FirestoreValue `json:"value"`
 	UpdateMask struct {
@@ -17,7 +17,11 @@ type FirestoreValue struct {
 	// Fields is the data for this value. The type depends on the format of your
 	// database. Log the interface{} value and inspect the result to see a JSON
 	// representation of your database fields.
-	Fields     interface{} `json:"fields"`
-	Name       string      `json:"name"`
-	UpdateTime time.Time   `json:"updateTime"`
+	Fields     ExampleDocument `json:"fields"`
+	Name       string          `json:"name"`
+	UpdateTime time.Time       `json:"updateTime"`
+}
+
+type ExampleDocument struct {
+	Name StringValue
 }

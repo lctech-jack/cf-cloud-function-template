@@ -1,0 +1,7 @@
+- path: "Example/Author"
+  fields:
+    name: "Jack"
+
+- path: "Example/Author2"
+  fields:
+    name: "Mike"

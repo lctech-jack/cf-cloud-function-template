@@ -43,3 +43,16 @@ gcloud functions deploy ${runmode}-{custom_func_name} \
 ```shell
 sh ./deploy.sh
 ```
+
+## Testing
+Follow below steps to build testing environment:
+1. Install firestore tool, please visit: https://firebase.google.com/docs/cli#install-cli-mac-linux
+2. Install and init firestore emulators first, please visit: https://firebase.google.com/docs/emulator-suite/install_and_configure <br/>
+3. Startup the emulators
+```shell
+firebase emulators:start --project testing
+```
+4. Run go test
+```shell
+go test -v ./test
+```
